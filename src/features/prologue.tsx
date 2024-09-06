@@ -1,3 +1,4 @@
+"use client";
 import { MobileImage, PcImage, StyledImage } from "ENTITIES/image";
 import { useDispatch_, useSelector_ } from "SHARED/global-state";
 import { linksSlice } from "SHARED/global-state/slices/links";

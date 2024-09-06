@@ -1,3 +1,4 @@
+"use client";
 import { useSelector_ } from "SHARED/global-state";
 import { ptw } from "SHARED/pixel-recalculate";
 import styled from "styled-components";

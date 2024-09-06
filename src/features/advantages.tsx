@@ -1,3 +1,4 @@
+"use client";
 import CardsMap from "ENTITIES/cards-map";
 import { StyledImage } from "ENTITIES/image";
 import { Title } from "ENTITIES/title";

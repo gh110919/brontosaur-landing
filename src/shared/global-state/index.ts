@@ -1,9 +1,9 @@
 import { Reducer, combineReducers, configureStore } from "@reduxjs/toolkit";
-import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
+import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { cardsSlice } from "./slices/cards";
+import { inputsSlice } from "./slices/inputs";
 import { linksSlice } from "./slices/links";
 import { popupSlice } from "./slices/popup";
-import { inputsSlice } from "./slices/inputs";
 
 const slices = {
   cardsSlice,

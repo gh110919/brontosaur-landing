@@ -1,3 +1,4 @@
+"use client";
 import { MobileImage, PcImage, StyledImage } from "ENTITIES/image";
 import { Logo } from "ENTITIES/logo";
 import { useDispatch_, useSelector_ } from "SHARED/global-state";

@@ -1,3 +1,4 @@
+"use client";
 import Popup from "FEATURES/popup";
 import { useDispatch_, useSelector_ } from "SHARED/global-state";
 import { popupSlice } from "SHARED/global-state/slices/popup";

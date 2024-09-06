@@ -1,3 +1,4 @@
+"use client";
 import { useDispatch_, useSelector_ } from "SHARED/global-state";
 import { cardsSlice } from "SHARED/global-state/slices/cards";
 import styled from "styled-components";
