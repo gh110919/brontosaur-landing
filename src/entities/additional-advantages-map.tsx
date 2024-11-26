@@ -84,22 +84,22 @@ export default function AdditionalAdvantagesMap() {
         {[
           {
             title: "Аналитика",
-            image: "assets/chart_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/chart_icon_50.svg",
             text: "Используйте данные для повышения эффективности работы",
           },
           {
             title: "Повышенние удовлетворенности клиентов",
-            image: "assets/stonks_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/stonks_icon_50.svg",
             text: "Улучшайте качество обслуживания, сокращая время ожидания",
           },
           {
             title: "Специальные предложения и акции",
-            image: "assets/tick_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/tick_icon_50.svg",
             text: "Создавайте промо-акции для привлечения новых гостей и повышения лояльности текущих",
           },
           {
             title: "Мультирегиональность",
-            image: "assets/position_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/position_icon_50.svg",
             text: "Brontosaur автоматически определяет местоположение пользователя и отображает заведения в его городе. Пользователь также может вручную выбрать другой город",
           },
         ].map((e, i) => {

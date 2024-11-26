@@ -101,7 +101,7 @@ export default function Epilogue() {
       </TextBox>
       <Picture>
         <StyledImage
-          src="assets/phone_2.png"
+          src="https://storage.yandexcloud.net/brontosaur/promo-site/assets/phone_2.png"
           width={614}
           height={561}
         ></StyledImage>

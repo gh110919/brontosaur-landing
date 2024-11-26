@@ -1,4 +1,5 @@
 "use client";
+
 import { MobileImage, PcImage, StyledImage } from "ENTITIES/image";
 import { Logo } from "ENTITIES/logo";
 import { useDispatch_, useSelector_ } from "SHARED/global-state";
@@ -156,13 +157,13 @@ export default function FooterComponent() {
       <Box>
         <Logo style={{ filter: "invert()" }}>Brontosaur</Logo>
         <Contacts>
-          <Telephone href="tel:+79990000000">+7 (999) 000-00-00</Telephone>
-          <Email href="mailto:brontosaur@info.ru">brontosaur@info.ru</Email>
+          <Telephone href="tel:+79516878803">+7-951-687-88-03</Telephone>
+          <Email href="mailto:fox.spb@bk.ru">fox.spb@bk.ru</Email>
         </Contacts>
       </Box>
       <Links>
         <a
-          href="https://vk.com/webonizer"
+          href="https://vk.com/brontosaur"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -170,8 +171,8 @@ export default function FooterComponent() {
             <StyledImage
               src={
                 footer?.vk
-                  ? "assets/vk_icon_50_black.svg"
-                  : "assets/vk_icon_50.svg"
+                  ? "https://storage.yandexcloud.net/brontosaur/promo-site/assets/vk_icon_50_black.svg"
+                  : "https://storage.yandexcloud.net/brontosaur/promo-site/assets/vk_icon_50.svg"
               }
               width={50}
               height={50}
@@ -185,8 +186,8 @@ export default function FooterComponent() {
             <StyledImage
               src={
                 footer?.vk
-                  ? "assets/vk_icon_50_black.svg"
-                  : "assets/vk_icon_50.svg"
+                  ? "https://storage.yandexcloud.net/brontosaur/promo-site/assets/vk_icon_50_black.svg"
+                  : "https://storage.yandexcloud.net/brontosaur/promo-site/assets/vk_icon_50.svg"
               }
               width={60}
               height={60}
@@ -198,7 +199,7 @@ export default function FooterComponent() {
           </MobileImage>
         </a>
         <a
-          href="https://t.me/webonizer"
+          href="https://t.me/DenBrontosaur"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -206,8 +207,8 @@ export default function FooterComponent() {
             <StyledImage
               src={
                 footer?.tg
-                  ? "assets/tg_icon_50_black.svg"
-                  : "assets/tg_icon_50.svg"
+                  ? "https://storage.yandexcloud.net/brontosaur/promo-site/assets/tg_icon_50_black.svg"
+                  : "https://storage.yandexcloud.net/brontosaur/promo-site/assets/tg_icon_50.svg"
               }
               width={50}
               height={50}
@@ -221,8 +222,8 @@ export default function FooterComponent() {
             <StyledImage
               src={
                 footer?.tg
-                  ? "assets/tg_icon_50_black.svg"
-                  : "assets/tg_icon_50.svg"
+                  ? "https://storage.yandexcloud.net/brontosaur/promo-site/assets/tg_icon_50_black.svg"
+                  : "https://storage.yandexcloud.net/brontosaur/promo-site/assets/tg_icon_50.svg"
               }
               width={60}
               height={60}

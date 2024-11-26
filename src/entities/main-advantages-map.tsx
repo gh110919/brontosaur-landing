@@ -85,32 +85,32 @@ export default function MainAdvantagesMap() {
         {[
           {
             title: "Переход в цифровой век",
-            image: "assets/bot_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/bot_icon_50.svg",
             text: "Забудьте о бумажных записных книжках. Вся информация доступна на планшете",
           },
           {
             title: "Управление бронями",
-            image: "assets/folder_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/folder_icon_50.svg",
             text: "Администраторы могут легко добавлять и удалять резервы и заказы, видеть занятость столов в реальном времени",
           },
           {
             title: "Полная история операций",
-            image: "assets/page_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/page_icon_50.svg",
             text: "Вся история резервов и заказов хранится в системе",
           },
           {
             title: "Индивидуальные профили клиентов",
-            image: "assets/profile_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/profile_icon_50.svg",
             text: "Просматривайте историю заказов и добавляйте комментарии. Ограничивайте резервы нежелательным посетителям",
           },
           {
             title: "Автоматизация процессов",
-            image: "assets/handset_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/handset_icon_50.svg",
             text: "Не нужно отвечать на звонки для подтверждения резервов. Вся информация доступна онлайн и обновляется в реальном времени",
           },
           {
             title: "Фиксированные дни без резерва",
-            image: "assets/calendar_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/calendar_icon_50.svg",
             text: "Устанавливайте дни, когда бронирования невозможны, и планируйте ваше заведение более гибко",
           },
         ].map((e, i) => {

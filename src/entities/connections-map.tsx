@@ -165,7 +165,7 @@ export default function ConnectionMap() {
           {
             title: "С планшетом и съемкой",
             text: "Предоставляем все необходимое: планшет и услуги фото и видеосъемки",
-            image: "assets/tablet.png",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/tablet.png",
             price: "15 000 руб.",
           },
         ].map((e, i, a) => {

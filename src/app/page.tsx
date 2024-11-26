@@ -1,16 +1,14 @@
-"use client";
+"use server";
 
-import IndexPage from "PAGES/index-page";
-import { HelmetProvider } from "react-helmet-async";
-import { Provider } from "react-redux";
-import { rootStore } from "SHARED/global-state";
+import dynamic from "next/dynamic";
+import Loading from "./loading";
 
-export default function Home() {
-  return (
-    <Provider store={rootStore}>
-      <HelmetProvider>
-        <IndexPage></IndexPage>
-      </HelmetProvider>
-    </Provider>
-  );
+const DynamicIndex = dynamic(() => import("PAGES/index-page"), {
+  loading: () => <Loading></Loading>,
+  suspense: true,
+  ssr: false,
+});
+
+export default async function Home() {
+  return <DynamicIndex></DynamicIndex>;
 }

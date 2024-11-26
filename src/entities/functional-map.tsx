@@ -84,17 +84,17 @@ export default function FunctionalMap() {
           {
             title: "Выбор столика",
             text: "Укажите количество гостей, дату и время визита, и система покажет доступные столики. Недоступные столики автоматически исключаются",
-            image: "assets/table_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/table_icon_50.svg",
           },
           {
             title: "Подтверждение резервирования",
             text: "Выберите доступный столик, ознакомьтесь с его фото. Отправьте резерв и ожидайте подтверждение от администратора в реальном времени",
-            image: "assets/confirmation_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/confirmation_icon_50.svg",
           },
           {
             title: "Предварительный заказ из меню",
             text: "Добавьте блюда в заказ, оформите и оплатите его - к вашему приходу еда уже будет готова. Меню может быть доступно только в режиме каталога, если это решение владельца заведения",
-            image: "assets/menu_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/menu_icon_50.svg",
           },
         ].map((e, i) => (
           <li key={i}>

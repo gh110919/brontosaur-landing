@@ -1,4 +1,5 @@
 "use client";
+
 import CardsMap from "ENTITIES/cards-map";
 import { StyledImage } from "ENTITIES/image";
 import { Title } from "ENTITIES/title";
@@ -33,7 +34,7 @@ const CardsJoinBox = styled.div`
   position: relative;
 `;
 
-const JoinBox = styled.div<{ $hovered: boolean }>`
+const JoinBox = styled.a<{ $hovered: boolean }>`
   width: ${ptw(440)};
   height: ${ptw(260)};
   padding: ${ptw(30)};
@@ -111,6 +112,7 @@ export default function Advantages() {
         <CardsMap></CardsMap>
         <JoinBox
           $hovered={hover?.advantages!}
+          href="#request"
           onTouchStart={handleBoxHover}
           onTouchEnd={handleLeave}
           onMouseEnter={handleBoxHover}
@@ -123,8 +125,8 @@ export default function Advantages() {
             <StyledImage
               src={`${
                 hover?.advantages
-                  ? "assets/arrow_down_gray_50.svg"
-                  : "assets/arrow_down_white_50.svg"
+                  ? "https://storage.yandexcloud.net/brontosaur/promo-site/assets/arrow_down_gray_50.svg"
+                  : "https://storage.yandexcloud.net/brontosaur/promo-site/assets/arrow_down_white_50.svg"
               }`}
               width={50}
               height={50}

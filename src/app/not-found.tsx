@@ -1,5 +1,6 @@
 "use client";
 
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
 import { rootStore } from "SHARED/global-state";
 import { ptw } from "SHARED/pixel-recalculate";
@@ -33,6 +34,13 @@ const Title = styled.h1`
   font-weight: 600;
   line-height: ${ptw(54)};
   text-align: center;
+
+  @media (max-width: 768px) {
+    width: ${ptw(415, 768)};
+    height: ${ptw(162, 768)};
+    font-size: ${ptw(46, 768)};
+    line-height: ${ptw(54, 768)};
+  }
 `;
 
 const Link = styled.a`
@@ -52,18 +60,32 @@ const Link = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: ${ptw(255, 768)};
+    height: ${ptw(60, 768)};
+    padding: ${ptw(14, 768)} ${ptw(16, 768)};
+    border-radius: ${ptw(10, 768)};
+    font-size: ${ptw(14, 768)};
+    line-height: ${ptw(18, 768)};
+  }
 `;
 
 export default function NotFound() {
   return (
-    <html>
+    <html lang="ru">
       <Body>
         <Provider store={rootStore}>
-          <HeaderComponent></HeaderComponent>
-          <Container>
-            <Title>К сожалению, этой страницы нет в нашем меню</Title>
-            <Link href="/">Вернуться на главную</Link>
-          </Container>
+          <HelmetProvider>
+            <Helmet>
+              <title>Не найдено</title>
+            </Helmet>
+            <HeaderComponent></HeaderComponent>
+            <Container>
+              <Title>К сожалению, этой страницы нет в нашем меню</Title>
+              <Link href="/">Вернуться на главную</Link>
+            </Container>
+          </HelmetProvider>
         </Provider>
       </Body>
     </html>

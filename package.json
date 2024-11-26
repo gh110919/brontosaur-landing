@@ -1,8 +1,12 @@
 {
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "gh-pages": "^6.2.0",
     "next": "14.2.6",
     "node": "^22.8.0",
+    "nodemailer": "^6.9.15",
     "react": "^18",
     "react-dom": "^18",
     "react-helmet-async": "^2.0.5",
@@ -11,6 +15,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.5.4",
+    "@types/nodemailer": "^6.4.15",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
@@ -27,7 +32,8 @@
     "dev": "next dev  -H 0.0.0.0 -p 80",
     "docker-up": "docker-compose up -d",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "npm run build && gh-pages -d .next"
   },
-  "version": "0.1.0"
+  "version": "1.1.0"
 }

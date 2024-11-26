@@ -1,6 +1,10 @@
+"use client";
+
 import EssenceNumberedButtonsMap from "ENTITIES/essence-numbered-buttons-map";
 import EssenceNumberedCardMap from "ENTITIES/essence-numbered-card-map";
 import { MobileImage, PcImage, StyledImage } from "ENTITIES/image";
+import { useDispatch_, useSelector_ } from "SHARED/global-state";
+import { cardsSlice } from "SHARED/global-state/slices/cards";
 import { ptw } from "SHARED/pixel-recalculate";
 import styled from "styled-components";
 
@@ -43,6 +47,18 @@ const ImageButtonsBox = styled.div`
 `;
 
 export default function Essence() {
+  const dispatch = useDispatch_();
+
+  const { hovered } = useSelector_((s) => s.cardsSlice);
+
+  const handleLeave = () => {
+    dispatch(
+      cardsSlice.actions.hoveredEssenseRM({
+        hovered: { ...hovered, essense: undefined },
+      })
+    );
+  };
+
   return (
     <Container>
       <Title>
@@ -52,16 +68,18 @@ export default function Essence() {
         <PcImage>
           <StyledImage
             style={{ transform: `translate(${ptw(0.1)},${ptw(20)})` }}
-            src="assets/laptop.png"
+            src="https://storage.yandexcloud.net/brontosaur/promo-site/assets/laptop.png"
             width={1021}
             height={622}
+            onClick={handleLeave}
           ></StyledImage>
         </PcImage>
         <MobileImage>
           <StyledImage
-            src="assets/laptop.png"
+            src="https://storage.yandexcloud.net/brontosaur/promo-site/assets/laptop.png"
             width={728}
             height={443}
+            onClick={handleLeave}
           ></StyledImage>
         </MobileImage>
         <EssenceNumberedButtonsMap></EssenceNumberedButtonsMap>

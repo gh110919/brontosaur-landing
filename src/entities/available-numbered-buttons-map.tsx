@@ -1,4 +1,5 @@
 "use client";
+
 import { useDispatch_, useSelector_ } from "SHARED/global-state";
 import { cardsSlice } from "SHARED/global-state/slices/cards";
 import styled from "styled-components";
@@ -58,10 +59,11 @@ export default function AvailableNumberedButtonsMap() {
           <li key={i}>
             <NumberedButton
               $position={e.position}
-              onTouchStart={() => handleElementHover(i)}
-              onTouchEnd={handleLeave}
-              onMouseEnter={() => handleElementHover(i)}
-              onMouseLeave={handleLeave}
+              onClick={() => handleElementHover(i)}
+              // onTouchStart={() => handleElementHover(i)}
+              // onTouchEnd={handleLeave}
+              // onMouseEnter={() => handleElementHover(i)}
+              // onMouseLeave={handleLeave}
             >
               {e.name}
             </NumberedButton>

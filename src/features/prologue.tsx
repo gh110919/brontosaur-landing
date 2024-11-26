@@ -1,4 +1,5 @@
 "use client";
+
 import { MobileImage, PcImage, StyledImage } from "ENTITIES/image";
 import { useDispatch_, useSelector_ } from "SHARED/global-state";
 import { linksSlice } from "SHARED/global-state/slices/links";
@@ -154,7 +155,7 @@ export default function Prologue() {
       <MobileImage>
         <StyledImage
           style={{ transform: `translate(${ptw(105)},${ptw(-139)})` }}
-          src="assets/phone.png"
+          src="https://storage.yandexcloud.net/brontosaur/promo-site/assets/phone.png"
           width={618}
           height={1138}
         ></StyledImage>
@@ -162,7 +163,7 @@ export default function Prologue() {
       <PcImage>
         <StyledImage
           style={{ transform: `translate(${ptw(7)},${ptw(-1)})` }}
-          src="assets/phone.png"
+          src="https://storage.yandexcloud.net/brontosaur/promo-site/assets/phone.png"
           width={486}
           height={894}
         ></StyledImage>

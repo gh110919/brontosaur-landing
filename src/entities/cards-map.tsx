@@ -80,28 +80,28 @@ export default function CardsMap() {
         {[
           {
             name: "Бесплатное использование",
-            image: "assets/card_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/card_icon_50.svg",
             text: "Brontosaur для пользователей всегда бесплатен",
           },
           {
             name: "Удобная регистрация",
-            image: "assets/phone_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/phone_icon_50.svg",
             text: "Регистрация через подтверждение email и номера телефона",
           },
           {
             name: "Интуитивный интерфейс",
-            image: "assets/laptop_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/laptop_icon_50.svg",
             text: "Все, что вам нужно, в одном месте",
           },
           {
             name: "Экономия времени",
-            image: "assets/time_icon_50.svg",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/time_icon_50.svg",
             text: "Будьте уверены, что столик будет вам доступен, и вас не заставят ждать долго",
           },
           {
             name: "Локальное и персонализированное обслуживание",
-            image: "assets/shop_icon_50.svg",
-            text: "Легкий доступ к заведением вашего города, с возможностью смены города вручную",
+            image: "https://storage.yandexcloud.net/brontosaur/promo-site/assets/shop_icon_50.svg",
+            text: "Легкий доступ к заведениям вашего города, с возможностью смены города вручную",
           },
         ].map((e, i) => (
           <li key={i}>

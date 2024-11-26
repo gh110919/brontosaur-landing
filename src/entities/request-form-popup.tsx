@@ -1,8 +1,10 @@
 "use client";
+
 import Popup from "FEATURES/popup";
 import { useDispatch_, useSelector_ } from "SHARED/global-state";
 import { popupSlice } from "SHARED/global-state/slices/popup";
 import { ptw } from "SHARED/pixel-recalculate";
+import axios from "axios";
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { StyledImage } from "./image";
@@ -77,14 +79,22 @@ export default function RequestFormPopup() {
 
   const inputs = useSelector_((s) => s.inputsSlice);
 
-  const handleFormSubmit = () => {
-    console.log(inputs);
-
-    dispatch(
-      popupSlice.actions.requestSuccessRM({
-        request: { ...request, success: !request?.success },
+  const handleFormSubmit = async () => {
+    await axios
+      .post("/api/send-email", inputs)
+      .then((r: any) => {
+        if (r.data.success) {
+          dispatch(
+            popupSlice.actions.requestSuccessRM({
+              request: { ...request, success: !request?.success },
+            })
+          );
+        }
       })
-    );
+      .catch((e) => {
+        console.error(e);
+        alert("Произошла ошибка отправки формы");
+      });
   };
 
   const formRef = useRef<HTMLFormElement>(null);
@@ -100,7 +110,7 @@ export default function RequestFormPopup() {
         <TitleImageBox>
           <Title style={{ textAlign: "left" }}>Заполните форму</Title>
           <StyledImage
-            src="assets/cross_icon_50_black.svg"
+            src="https://storage.yandexcloud.net/brontosaur/promo-site/assets/cross_icon_50_black.svg"
             width={50}
             height={50}
             onClick={handleCrossClick}

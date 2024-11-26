@@ -1,7 +1,11 @@
+"use client";
+
 import AvailableNumberedButtonsMap from "ENTITIES/available-numbered-buttons-map";
 import AvailableNumberedCardMap from "ENTITIES/available-numbered-card-map";
 import { MobileImage, PcImage, StyledImage } from "ENTITIES/image";
 import { Title } from "ENTITIES/title";
+import { useDispatch_, useSelector_ } from "SHARED/global-state";
+import { cardsSlice } from "SHARED/global-state/slices/cards";
 import { ptw } from "SHARED/pixel-recalculate";
 import styled from "styled-components";
 
@@ -15,7 +19,7 @@ const Container = styled.section`
 
   @media (max-width: 768px) {
     gap: ${ptw(50, 768)};
-    padding: ${ptw(50, 768)} 0 ${ptw(50, 768)} ;
+    padding: ${ptw(50, 768)} 0 ${ptw(50, 768)};
   }
 `;
 
@@ -25,6 +29,18 @@ const ImageCardsBox = styled.div`
 `;
 
 export default function Available() {
+  const dispatch = useDispatch_();
+
+  const { hovered } = useSelector_((s) => s.cardsSlice);
+
+  const handleLeave = () => {
+    dispatch(
+      cardsSlice.actions.hoveredAvailableRM({
+        hovered: { ...hovered, available: undefined },
+      })
+    );
+  };
+
   return (
     <Container>
       <Title>
@@ -33,16 +49,18 @@ export default function Available() {
       <ImageCardsBox>
         <PcImage>
           <StyledImage
-            src="assets/laptop_2.png"
+            src="https://storage.yandexcloud.net/brontosaur/promo-site/assets/laptop_2.png"
             width={1021}
             height={622}
+            onClick={handleLeave}
           ></StyledImage>
         </PcImage>
         <MobileImage>
           <StyledImage
-            src="assets/laptop_2.png"
+            src="https://storage.yandexcloud.net/brontosaur/promo-site/assets/laptop_2.png"
             width={728}
             height={443}
+            onClick={handleLeave}
           ></StyledImage>
         </MobileImage>
         <AvailableNumberedButtonsMap></AvailableNumberedButtonsMap>

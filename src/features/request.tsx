@@ -1,4 +1,5 @@
 "use client";
+
 import RequestFormPopup from "ENTITIES/request-form-popup";
 import RequestSuccessPopup from "ENTITIES/request-success-popup";
 import { useDispatch_, useSelector_ } from "SHARED/global-state";
@@ -155,7 +156,7 @@ export default function Request() {
         onMouseLeave={handleLeave}
         onClick={handleButtonClick}
       >
-        Заполнитиь данные
+        Указать свои контакты
       </Button>
       <RequestFormPopup></RequestFormPopup>
       <RequestSuccessPopup></RequestSuccessPopup>

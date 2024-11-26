@@ -1,5 +1,5 @@
 import { Reducer, combineReducers, configureStore } from "@reduxjs/toolkit";
-import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector, useStore } from "react-redux";
 import { cardsSlice } from "./slices/cards";
 import { inputsSlice } from "./slices/inputs";
 import { linksSlice } from "./slices/links";
@@ -27,8 +27,8 @@ export const rootStore = configureStore({
   devTools: true,
 });
 
-export type RootState = ReturnType<typeof rootStore.getState>;
-export type AppDispatch = typeof rootStore.dispatch;
-
-export const useDispatch_: () => AppDispatch = useDispatch;
-export const useSelector_: TypedUseSelectorHook<RootState> = useSelector;
+export const useDispatch_ = useDispatch.withTypes<typeof rootStore.dispatch>();
+export const useSelector_ =
+  useSelector.withTypes<ReturnType<typeof rootStore.getState>>();
+export const useStore_ =
+  useStore.withTypes<ReturnType<() => typeof rootStore>>();
